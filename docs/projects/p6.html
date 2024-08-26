@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - AI-Powered Communication Assistant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light beige background */
+            color: #333; /* Darker text color for contrast */
+        }
+
+        .project-detail {
+            background-color: #ffffff; /* White background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 1200px; /* Increased max-width for more space */
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .project-text {
+            max-width: 50%; /* Adjusted width to allow more space for keyframes */
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            color: #2a2a2a; /* Dark gray */
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            font-size: 1.5rem;
+            color: #ffac1d; /* Gold for emphasis */
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 5px;
+        }
+
+        .tag {
+            background-color: #ffac1d; /* Gold background for tags */
+            color: #ffffff; /* White text */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .github-link {
+            margin-left: auto;
+        }
+
+        .github-link a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333; /* Darker text color */
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .github-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .github-link a:hover img {
+            transform: scale(1.2); /* Slightly enlarge the GitHub icon on hover */
+        }
+
+        .project-description {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .composite-frame {
+            max-width: 45%; /* Set the width of the composite frame to make it larger */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Adjusted gap between keyframes */
+        }
+
+        .composite-frame {
+            display: flex;
+            flex-wrap: wrap; /* Wrap images to multiple lines if needed */
+            gap: 10px;
+        }
+
+        .composite-frame img {
+            width: 48%; /* Increased width to make the keyframes larger */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .composite-frame img:hover {
+            transform: translateY(-5px);
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .download-link img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-link img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Lightbox Styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail">
+        <div class="project-text">
+            <h2 class="project-title">AI-Powered Communication Assistant for the Elderly</h2>
+            <p class="project-subtitle">@Bachelor project</p>
+
+            <!-- Project Meta Section (Keywords and GitHub Link) -->
+            <div class="project-meta">
+                <div class="project-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">Promt engineering</span>
+                    <span class="tag">React Native</span>
+                    <span class="tag">AWS</span>
+                </div>
+                <div class="github-link">
+                    <a href="https://gitlab.com/Lajek20/bachelorproject" target="_blank">
+                        <img src="assets/images/icons8-github-250.png" alt="GitHub">
+                        View on GitLab
+                    </a>
+                </div>
+            </div>
+
+            <p class="project-description">
+                This project is an AI-powered communication assistant designed to simplify digital communication for elderly individuals who struggle with reading and writing. 
+                The app leverages Natural Language Processing (NLP), prompt engineering, and AI technologies, including the ChatGPT API and Text-to-Speech (TTS), to enhance user interaction.
+            </p>
+
+            <p class="project-description">
+                The front-end is built using React Native, enabling cross-platform functionality on both iOS and Android. The back-end utilizes AWS Amplify, incorporating services like AWS Cognito for 
+                secure user authentication and AWS AppSync for real-time data management via GraphQL APIs.
+            </p>
+            
+            <p class="project-description">
+                NLP and AI play a critical role in the app, offering real-time text correction and sentence rephrasing through ChatGPT, while TTS technology converts text into speech, making communication more accessible. 
+                The app is designed with a human-centered approach, ensuring an intuitive interface tailored to the needs of elderly users.
+            </p>
+            
+            <p class="project-description">
+                The application has undergone extensive testing, with plans for future enhancements, including multi-language support. This project showcases expertise in AI, NLP, 
+                and modern development frameworks to create an inclusive and user-friendly communication tool.
+            </p>
+            <a href="assets/files/P6_bachelorProject.pdf" target="_blank" class="download-link">
+                <img src="assets/images/download.png" alt="Download">
+            </a>
+        </div>
+        <div class="composite-frame">
+            <a href="#img1"><img src="assets/images/projects/bachelor/bachelor (1).png" alt="Keyframe 1"></a>
+            <a href="#img2"><img src="assets/images/projects/bachelor/bachelor (2).png" alt="Keyframe 2"></a>
+            <a href="#img3"><img src="assets/images/projects/bachelor/bachelor(1).jpg" alt="Keyframe 3"></a>
+            <a href="#img4"><img src="assets/images/projects/bachelor/bachelor (2).jpg" alt="Keyframe 4"></a>
+        </div>
+    </div>
+
+    <!-- Lightbox Modals -->
+    <div id="img1" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="assets/images/projects/bachelor/bachelor (1).png" alt="Enlarged Image 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="lightbox-close">&times;"></a>
+        <img src="assets/images/projects/bachelor/bachelor (2).png" alt="Enlarged Image 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="lightbox-close">&times;"></a>
+        <img src="assets/images/projects/bachelor/bachelor(1).jpg" alt="Enlarged Image 3">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#" class="lightbox-close">&times;"></a>
+        <img src="assets/images/projects/bachelor/bachelor (2).jpg" alt="Enlarged Image 4">

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - AI-Powered Communication Assistant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light beige background */
+            color: #333; /* Darker text color for contrast */
+        }
+
+        .project-detail {
+            background-color: #ffffff; /* White background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 1200px; /* Increased max-width for more space */
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .project-text {
+            max-width: 50%; /* Adjusted width to allow more space for keyframes */
+        }
+
+        .project-title {
+            font-size: 2.6rem;
+            color: #2a2a2a; /* Dark gray */
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            font-size: 1.7rem;
+            color: #ffac1d; /* Gold for emphasis */
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 5px;
+        }
+
+        .tag {
+            background-color: #ffac1d; /* Gold background for tags */
+            color: #ffffff; /* White text */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .github-link {
+            margin-left: auto;
+        }
+
+        .github-link a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333; /* Darker text color */
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .github-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .github-link a:hover img {
+            transform: scale(1.2); /* Slightly enlarge the GitHub icon on hover */
+        }
+
+        .project-description {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .composite-frame {
+            max-width: 80%; /* Set the width of the composite frame to make it larger */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Adjusted gap between keyframes */
+        }
+
+        .composite-frame {
+            display: flex;
+            flex-wrap: wrap; /* Wrap images to multiple lines if needed */
+            gap: 10px;
+        }
+
+        .composite-frame img {
+            width: 105%; /* Increased width to make the keyframes larger */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .composite-frame img:hover {
+            transform: translateY(-5px);
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .download-link img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-link img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Lightbox Styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail">
+        <div class="project-text">
+            <h2 class="project-title">Numatix: Simple WebAssembly for Numerical Computations on the Web</h2>
+            <p class="project-subtitle">@Compiler</p>
+
+            <!-- Project Meta Section (Keywords and GitHub Link) -->
+            <div class="project-meta">
+                <div class="project-tags">
+                    <span class="tag">WebAssembly</span>
+                    <span class="tag">Programming Language Design</span>
+                    <span class="tag">Numerical Computations</span>
+                    <span class="tag">Compiler Development</span>
+                </div>
+                <div class="github-link">
+                    <a href="https://github.com/hijabnasir/P4" target="_blank">
+                        <img src="assets/images/icons8-github-250.png" alt="GitHub">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <p class="project-description">
+                Development of Numatix, a programming language designed for numerical computations, optimized for compilation into WebAssembly. 
+                The primary goal was to address the limitations of JavaScript in handling complex numerical tasks by leveraging WebAssembly's performance advantages. 
+                Numatix simplifies the process for developers to write high-level numerical code that can be compiled into efficient WebAssembly,
+                enabling superior computational efficiency in web applications.
+            </p>
+
+            <p class="project-description">
+                Designing and implementing key components of the Numatix language, including the syntax, 
+                semantics, and compiler phases. I focused on the creation of a straightforward yet powerful language 
+                that seamlessly integrates with JavaScript, allowing web developers to optimize performance-critical 
+                parts of their applications. The project involved rigorous testing and evaluation to ensure the language's reliability and effectiveness, 
+                culminating in the successful development of a functional compiler for Numatix.
+            </p>
+            
+            <a href="assets/files/educado-mobile-application (3).pdf" target="_blank" class="download-link">
+                <img src="assets/images/download.png" alt="Download">
+            </a>
+        </div>
+        <div class="composite-frame">
+            <a href="#img1"><img src="assets/images/p4.webp" alt="Keyframe 1"></a>
+        </div>
+    </div>
+
+    <!-- Lightbox Modals -->
+    <div id="img1" class="lightbox">
+        <a href="#" class="lightbox-close">&times;</a>
+        <img src="assets/images/p4.webp" alt="Enlarged Image 1">
+    </div>
+    
